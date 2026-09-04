@@ -26,7 +26,7 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,js,mysql,postgres,mongodb,redis,docker,git,github&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,docker,git,github&theme=dark" />
 
 </div>
 
@@ -44,26 +44,6 @@
 </div>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=newsemaborneo&theme=tokyonight&no-frame=true&row=1&column=7" />
-
-</div>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
-
-## 🐍 Contribution Snake
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/output/github-contribution-grid-snake.svg" width="90%" />
-
-</div>
-
-> Snake ini otomatis "memakan" grafik kontribusi kamu — perlu setup GitHub Action sekali (lihat catatan di bawah).
 
 <br/>
 
