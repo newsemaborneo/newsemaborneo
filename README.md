@@ -6,6 +6,10 @@
 
 <br/>
 
+<img src="https://komarev.com/ghpvc/?username=newsemaborneo&style=flat-square&color=2E9EF7&label=Profile+Views" alt="Profile Views" />
+
+<br/>
+
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="500">
 
 </div>
@@ -45,10 +49,6 @@
 <br/>
 
 <div align="center">
-
-<img src="https://komarev.com/ghpvc/?username=newsemaborneo&style=flat-square&color=2E9EF7&label=Profile+Views" />
-
-<br/><br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A11CB,100:2E9EF7&height=100&section=footer" width="100%"/>
 
