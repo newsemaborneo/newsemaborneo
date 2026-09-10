@@ -28,20 +28,6 @@
 
 </div>
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=newsemaborneo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=newsemaborneo&layout=compact&theme=tokyonight&hide_border=true" width="38%" />
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com/?user=newsemaborneo&theme=tokyonight&hide_border=true" width="60%" />
-
-</div>
-
 <br/>
 
 <div align="center">
