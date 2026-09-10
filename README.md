@@ -5,13 +5,6 @@
 </div>
 
 
-```yaml
-name: "Newsem Aborneo"
-role: "Backend / Full Stack Developer"
-focus: ["Scalable APIs", "Monolithic Architecture", "Clean Architecture"]
-currently_learning: "Go & Distributed Systems"
-fun_fact: "Debugging adalah seni mencari jarum dalam tumpukan jarum"
-```
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
 
