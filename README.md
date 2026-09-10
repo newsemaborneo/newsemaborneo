@@ -4,7 +4,6 @@
 
 </div>
 
-## 👋 Tentang Saya
 
 ```yaml
 name: "Newsem Aborneo"
