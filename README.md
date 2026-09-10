@@ -30,7 +30,7 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,docker,git,github&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,git,github&theme=dark" />
 
 </div>
 
