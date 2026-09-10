@@ -17,7 +17,7 @@
 ## 👋 Tentang Saya
 
 ```yaml
-name: "Nama Kamu"
+name: "Newsem Aborneo"
 role: "Backend / Full Stack Developer"
 focus: ["Scalable APIs", "Microservices", "Clean Architecture"]
 currently_learning: "Go & Distributed Systems"
@@ -30,7 +30,7 @@ fun_fact: "Debugging adalah seni mencari jarum dalam tumpukan jarum"
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,postgres,docker,git,github,linux&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,postgres,git,github&theme=dark" />
 
 </div>
 
@@ -50,7 +50,6 @@ fun_fact: "Debugging adalah seni mencari jarum dalam tumpukan jarum"
 
 ### 🗄️ Database & Tools
 - 🐬 MySQL / PostgreSQL
-- 🐳 Docker
 - 🔀 Git & GitHub Actions
 
 </td>
