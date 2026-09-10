@@ -12,7 +12,7 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,git,github&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nestjs,laravel,nodejs,php,ts,mysql,git,github&theme=dark" />
 
 </div>
 
@@ -24,7 +24,6 @@
 
 ### 🔧 Backend
 - ⚡ **Nest.js** — Arsitektur modular & scalable
-- 🐹 **Go** — Performa tinggi & concurrency
 - 🐘 **Laravel** — Rapid development
 
 </td>
