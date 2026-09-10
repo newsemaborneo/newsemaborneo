@@ -37,41 +37,6 @@
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=newsemaborneo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=newsemaborneo&layout=compact&theme=tokyonight&hide_border=true" width="38%" />
-
-<br/>
-
-<img src="https://streak-stats.demolab.com/?user=newsemaborneo&theme=tokyonight&hide_border=true" width="60%" />
-
-</div>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
-
-## 🏆 Trophy
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=newsemaborneo&theme=tokyonight&no-frame=true&row=1&column=6" />
-
-</div>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
-
-## 📈 Activity Graph
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=newsemaborneo&theme=tokyo-night&hide_border=true" width="90%" />
-
-</div>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
-
 <br/>
 
 <div align="center">
