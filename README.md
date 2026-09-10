@@ -1,12 +1,28 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=2E9EF7&center=true&vCenter=true&width=650&lines=Full+Stack+Developer;Backend+Engineer;Nest.js+%7C+Go+%7C+Laravel;Building+Scalable+Systems+%E2%9A%A1" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1000&color=2E9EF7&center=true&vCenter=true&width=650&lines=Full+Stack+Developer;Backend+Engineer;Nest.js+%7C+Go+%7C+Laravel;Building+Scalable+Systems+%E2%9A%A1" alt="Typing SVG" />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9EF7,100:6A11CB&height=150&section=header" width="100%"/>
+
+</div>
 
 <br/>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="500">
-
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="420">
 </div>
+
+<br/>
+
+## 👋 Tentang Saya
+
+```yaml
+name: "Nama Kamu"
+role: "Backend / Full Stack Developer"
+focus: ["Scalable APIs", "Microservices", "Clean Architecture"]
+currently_learning: "Go & Distributed Systems"
+fun_fact: "Debugging adalah seni mencari jarum dalam tumpukan jarum"
+```
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
 
@@ -14,16 +30,33 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,git,github&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nestjs,go,laravel,nodejs,php,ts,mysql,postgres,docker,git,github,linux&theme=dark" />
 
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%">
-
 <br/>
 
+<table align="center">
+<tr>
+<td valign="top" width="50%">
+
+### 🔧 Backend
+- ⚡ **Nest.js** — Arsitektur modular & scalable
+- 🐹 **Go** — Performa tinggi & concurrency
+- 🐘 **Laravel** — Rapid development
+
+</td>
+<td valign="top" width="50%">
+
+### 🗄️ Database & Tools
+- 🐬 MySQL / PostgreSQL
+- 🐳 Docker
+- 🔀 Git & GitHub Actions
+
+</td>
+</tr>
+</table>
+
 <div align="center">
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A11CB,100:2E9EF7&height=100&section=footer" width="100%"/>
-
 </div>
