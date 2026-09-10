@@ -17,6 +17,3 @@
 </div>
 
 
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A11CB,100:2E9EF7&height=100&section=footer" width="100%"/>
-</div>
