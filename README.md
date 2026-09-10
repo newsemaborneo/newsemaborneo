@@ -4,24 +4,7 @@
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=newsemaborneo&style=flat-square&color=2E9EF7&label=Profile+Views" alt="Profile Views" />
-
-<br/>
-
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="500">
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<a href="mailto:newsemaborneonewsem@gmail.com">
-  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-<a href="https://github.com/newsemaborneo">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-</a>
 
 </div>
 
