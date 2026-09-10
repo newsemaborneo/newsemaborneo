@@ -16,26 +16,6 @@
 
 </div>
 
-<br/>
-
-<table align="center">
-<tr>
-<td valign="top" width="50%">
-
-### 🔧 Backend
-- ⚡ **Nest.js** — Arsitektur modular & scalable
-- 🐘 **Laravel** — Rapid development
-
-</td>
-<td valign="top" width="50%">
-
-### 🗄️ Database & Tools
-- 🐬 MySQL
-- 🔀 Git & GitHub Actions
-
-</td>
-</tr>
-</table>
 
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A11CB,100:2E9EF7&height=100&section=footer" width="100%"/>
