@@ -1,6 +1,6 @@
 <div align="center">
 
-# NEWSEM ABORNEO
+# RACOONCODE
 
 <a href="https://newsemaborneo.github.io/newsemaborneo/">
   <img src="https://github.com/newsemaborneo/newsemaborneo/blob/main/assets/robot.svg?raw=true" width="460" alt="robot Newsem" />
@@ -75,17 +75,17 @@ $ ls ./learning
 </tr>
 </table>
 
+---
 
 ## 📡 BATTLE STATS
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=newsemaborneo&show_icons=true&hide_border=true&bg_color=0D0D0D&title_color=FF0033&icon_color=00F0FF&text_color=FFFFFF" alt="GitHub stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=newsemaborneo&layout=compact&hide_border=true&bg_color=0D0D0D&title_color=FF0033&text_color=FFFFFF" alt="Top languages" />
+<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/3-stats.svg" alt="GitHub stats" />
+<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/2-most-commit-language.svg" alt="Most commit language" />
 
-<img src="https://streak-stats.demolab.com/?user=newsemaborneo&hide_border=true&background=0D0D0D&stroke=FF0033&ring=FF0033&fire=FF0033&currStreakLabel=00F0FF&sideLabels=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=888888" alt="GitHub streak" />
-
-<img src="https://ghchart.rshah.org/FF0033/newsemaborneo" alt="Contribution chart" width="720" />
+<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/1-repos-per-language.svg" alt="Repos per language" />
+<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/4-productive-time.svg" alt="Productive time" />
 
 </div>
 
