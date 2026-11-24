@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="200" height="230">
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="3s" repeatCount="indefinite"/>
+    <line x1="100" y1="22" x2="100" y2="48" stroke="#FF0033" stroke-width="4"/>
+    <circle cx="100" cy="16" r="8" fill="#FF0033">
+      <animate attributeName="fill" values="#FF0033;#00F0FF;#FF0033" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="8;11;8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="40" y="48" width="120" height="90" rx="22" fill="#111111" stroke="#FF0033" stroke-width="4"/>
+    <rect x="28" y="78" width="12" height="30" rx="5" fill="#FF0033"/>
+    <rect x="160" y="78" width="12" height="30" rx="5" fill="#FF0033"/>
+    <circle cx="75" cy="85" r="17" fill="#ffffff"/>
+    <circle cx="125" cy="85" r="17" fill="#ffffff"/>
+    <circle cx="75" cy="85" r="7" fill="#FF0033">
+      <animateTransform attributeName="transform" type="translate" values="-6 0;6 0;6 4;-6 4;-6 0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="125" cy="85" r="7" fill="#FF0033">
+      <animateTransform attributeName="transform" type="translate" values="-6 0;6 0;6 4;-6 4;-6 0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="58" y="68" width="34" height="0" fill="#111111">
+      <animate attributeName="height" values="0;0;34;0;0" keyTimes="0;0.9;0.94;0.98;1" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="108" y="68" width="34" height="0" fill="#111111">
+      <animate attributeName="height" values="0;0;34;0;0" keyTimes="0;0.9;0.94;0.98;1" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="72" y="115" width="56" height="10" rx="5" fill="#00F0FF">
+      <animate attributeName="width" values="56;40;56" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="72;80;72" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="65" y="146" width="70" height="62" rx="14" fill="#111111" stroke="#FF0033" stroke-width="4"/>
+    <circle cx="100" cy="177" r="9" fill="#00F0FF">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="40" y="152" width="18" height="46" rx="8" fill="#FF0033"/>
+    <rect x="142" y="152" width="18" height="46" rx="8" fill="#FF0033">
+      <animateTransform attributeName="transform" type="rotate" values="0 151 152;-25 151 152;0 151 152" dur="1.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
