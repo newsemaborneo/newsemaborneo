@@ -1,5 +1,6 @@
 import os
 import json
+import math
 import datetime
 import urllib.request
 
@@ -59,7 +60,11 @@ def build(total, weekly):
                 (x + step * 0.62, MID),
             ]
         pts.append((x + step, MID))
+
     d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    length = sum(math.hypot(x2 - x1, y2 - y1) for (x1, y1), (x2, y2) in zip(pts, pts[1:]))
+    dash = length * 0.14
+    gap = length - dash
 
     today = datetime.datetime.utcnow().strftime("%Y-%m-%d")
 
@@ -73,7 +78,26 @@ def build(total, weekly):
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-  <style>text {{ font-family: monospace; font-weight: bold; }}</style>
+  <style>
+    text {{ font-family: monospace; font-weight: bold; }}
+    .pulse {{
+      stroke-dasharray: {dash:.1f} {gap:.1f};
+      animation: run 5s linear infinite;
+    }}
+    @keyframes run {{
+      from {{ stroke-dashoffset: {length:.1f}; }}
+      to   {{ stroke-dashoffset: 0; }}
+    }}
+    .dot {{
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: beat 0.9s ease-in-out infinite;
+    }}
+    @keyframes beat {{
+      0%, 100% {{ transform: scale(0.8); opacity: 1; }}
+      50%      {{ transform: scale(1.6); opacity: 0.4; }}
+    }}
+  </style>
 
   <rect width="{W}" height="{H}" rx="16" fill="#0D0D0D" stroke="#FF0033" stroke-opacity="0.5"/>
   <rect width="{W}" height="{H}" rx="16" fill="url(#grid)"/>
@@ -82,15 +106,10 @@ def build(total, weekly):
   <text x="776" y="32" fill="#00F0FF" font-size="15" text-anchor="end">{total} contributions / last year</text>
 
   <path d="{d}" fill="none" stroke="#FF0033" stroke-opacity="0.25" stroke-width="2" stroke-linejoin="round"/>
-  <path d="{d}" pathLength="1000" fill="none" stroke="#FF0033" stroke-width="3"
-        stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="140 860" filter="url(#glow)">
-    <animate attributeName="stroke-dashoffset" values="1000;0" dur="6s" repeatCount="indefinite"/>
-  </path>
+  <path class="pulse" d="{d}" fill="none" stroke="#FF0033" stroke-width="3"
+        stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)"/>
 
-  <circle cx="30" cy="170" r="5" fill="#FF0033" filter="url(#glow)">
-    <animate attributeName="r" values="4;8;4" dur="0.9s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="1;0.4;1" dur="0.9s" repeatCount="indefinite"/>
-  </circle>
+  <circle class="dot" cx="30" cy="170" r="5" fill="#FF0033" filter="url(#glow)"/>
   <text x="46" y="175" fill="#FF0033" font-size="12">LIVE</text>
   <text x="776" y="175" fill="#888888" font-size="12" text-anchor="end">updated {today} UTC</text>
 </svg>
