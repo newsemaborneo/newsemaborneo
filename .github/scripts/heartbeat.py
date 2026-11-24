@@ -8,7 +8,7 @@ LOGIN = os.environ.get("LOGIN", "newsemaborneo")
 NAME = os.environ.get("DISPLAY_NAME", "Newsem Aborneo")
 TOKEN = os.environ["GH_TOKEN"]
 DAYS = 31
-T = 6.0  # detik untuk satu kali garis terang menyapu grafik
+T = 6.0  # detik untuk satu kali kilatan menyapu grafik
 
 QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
@@ -32,9 +32,7 @@ text { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; }
   9% { transform: scale(1.6); } 14%, 100% { transform: scale(1); }
 }
 .area { animation: breathe 1.2s ease-in-out infinite; }
-@keyframes breathe { 0%, 100% { opacity: .55; } 25% { opacity: 1; } 55% { opacity: .55; } 75% { opacity: .85; } }
-.live { transform-box: fill-box; transform-origin: center; animation: lub 1.2s ease-in-out infinite; }
-@keyframes lub { 0%, 100% { transform: scale(.8); } 25% { transform: scale(1.5); } 55% { transform: scale(.9); } 75% { transform: scale(1.3); } }
+@keyframes breathe { 0%, 100% { opacity: .6; } 25% { opacity: 1; } 55% { opacity: .6; } 75% { opacity: .85; } }
 """
 
 
@@ -98,7 +96,6 @@ def spline(pts, top, bottom, steps=10):
 def build(days, values):
     W, H = 1060, 365
     PL, PR, PT, PB = 85, 1020, 65, 303
-    total = sum(values)
 
     step = 10 if max(values) > 30 else 5
     ymax = max(step, math.ceil(max(values) / step) * step)
@@ -122,7 +119,7 @@ def build(days, values):
 
     for v in range(0, ymax + 1, step):
         y = PB - v / ymax * (PB - PT)
-        parts.append(f'<line x1="{PL}" y1="{y:.1f}" x2="{PR}" y2="{PB - (v / ymax) * (PB - PT) - 0:.1f}" stroke="#FF0033" stroke-opacity="0.14" stroke-dasharray="3 4"/>')
+        parts.append(f'<line x1="{PL}" y1="{y:.1f}" x2="{PR}" y2="{y:.1f}" stroke="#FF0033" stroke-opacity="0.14" stroke-dasharray="3 4"/>')
         parts.append(f'<text x="{PL - 12}" y="{y + 4:.1f}" fill="#FF0033" font-size="12" text-anchor="end">{v}</text>')
 
     for i, day in enumerate(days):
@@ -132,7 +129,7 @@ def build(days, values):
 
     parts.append(f'<path class="area" d="{area}" fill="url(#fill)"/>')
     parts.append(f'<path d="{d}" fill="none" stroke="#FF0033" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>')
-    parts.append(f'<path class="run" d="{d}" fill="none" stroke="#FF99AA" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)"/>')
+    parts.append(f'<path class="run" d="{d}" fill="none" stroke="#FF3355" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)"/>')
 
     for i, (x, y) in enumerate(pts):
         arc = cum[marks[i]]
@@ -144,7 +141,6 @@ def build(days, values):
         .replace("__LEN__", f"{length:.1f}")
         .replace("__T__", f"{T:.1f}")
     )
-    today = datetime.datetime.utcnow().strftime("%Y-%m-%d")
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">
   <defs>
@@ -161,17 +157,12 @@ def build(days, values):
 
   <rect width="{W}" height="{H}" rx="14" fill="#141414"/>
 
-  <text x="{W / 2}" y="34" fill="#FF0033" font-size="19" text-anchor="middle">{NAME}’s Contribution Heartbeat</text>
-  <text x="{W / 2}" y="52" fill="#00F0FF" font-size="12" text-anchor="middle">{total} contributions · last {DAYS} days</text>
+  <text x="{W / 2}" y="34" fill="#FF0033" font-size="19" text-anchor="middle">{NAME} 's Contribution Graph</text>
 
   <text x="30" y="{(PT + PB) / 2}" fill="#FF0033" font-size="12" text-anchor="middle" transform="rotate(-90 30 {(PT + PB) / 2})">Contributions</text>
   <text x="{(PL + PR) / 2}" y="{PB + 52}" fill="#FF0033" font-size="12" text-anchor="middle">Days</text>
 
   {chr(10).join("  " + p for p in parts)}
-
-  <circle class="live" cx="{PR - 58}" cy="30" r="5" fill="#FF0033" filter="url(#glow)"/>
-  <text x="{PR - 46}" y="34" fill="#FF0033" font-size="12">LIVE</text>
-  <text x="{PR}" y="{H - 12}" fill="#666666" font-size="11" text-anchor="end">updated {today} UTC</text>
 </svg>
 '''
 
