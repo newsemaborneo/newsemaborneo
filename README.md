@@ -20,7 +20,7 @@
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/assets/divider.svg" width="100%" height="14" alt="" />
 
 ## ☠️ WHO AM I
 
@@ -36,7 +36,7 @@ $ cat profile.txt
 > Status   : Online ⚡
 ```
 
----
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/assets/divider.svg" width="100%" height="14" alt="" />
 
 ## ⚔️ ARSENAL
 
@@ -50,7 +50,7 @@ $ cat profile.txt
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/assets/divider.svg" width="100%" height="14" alt="" />
 
 ## 🧪 CURRENTLY LEVELING UP
 
@@ -75,7 +75,7 @@ $ ls ./learning
 </tr>
 </table>
 
----
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/assets/divider.svg" width="100%" height="14" alt="" />
 
 ## 📡 BATTLE STATS
 
@@ -89,11 +89,13 @@ $ ls ./learning
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/assets/divider.svg" width="100%" height="14" alt="" />
 
 ## 🔥 CONTRIBUTION STATS
 
 <div align="center">
+
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/output/snake-dark.svg" width="100%" alt="Contribution snake" />
 
 <img src="https://streak-stats.demolab.com/?user=newsemaborneo&hide_border=true&background=0D0D0D&stroke=FF0033&ring=FF0033&fire=FF0033&currStreakLabel=00F0FF&sideLabels=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=888888" alt="GitHub streak" />
 
@@ -101,7 +103,7 @@ $ ls ./learning
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/assets/divider.svg" width="100%" height="14" alt="" />
 
 ## 📬 CONTACT
 
