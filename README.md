@@ -3,12 +3,8 @@
 # NEWSEM ABORNEO
 
 <a href="https://newsemaborneo.github.io/newsemaborneo/">
-  <img src="https://github.com/newsemaborneo/newsemaborneo/blob/main/assets/robot.svg?raw=true" width="400" alt="robot, klik untuk ngobrol" />
+  <img src="https://github.com/newsemaborneo/newsemaborneo/blob/main/assets/robot.svg?raw=true" width="460" alt="robot Newsem" />
 </a>
-
-<sub>👆 klik robotnya untuk ngobrol, di sana matanya ngikutin kursormu 👀</sub>
-
-<br/><br/>
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=2500&pause=800&color=FF0033&center=true&vCenter=true&width=700&lines=Backend+Engineer;NestJS+%7C+Laravel+%7C+Go;IoT+%2B+AI+%2B+Clean+Architecture;Ship+fast.+Scale+harder." alt="Typing SVG" />
 
@@ -73,7 +69,7 @@ $ ls ./learning
 </td>
 <td width="50%" align="center">
 
-<img src="https://github.com/newsemaborneo/newsemaborneo/blob/main/assets/robot.svg?raw=true" width="200" alt="robot"/>
+<img src="https://github.com/newsemaborneo/newsemaborneo/blob/main/assets/robot.svg?raw=true" width="220" alt="robot"/>
 
 </td>
 </tr>
