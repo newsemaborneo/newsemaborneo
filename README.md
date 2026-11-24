@@ -97,6 +97,8 @@ $ ls ./learning
 
 <img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/output/snake-dark.svg" width="100%" alt="Contribution snake" />
 
+<img src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/assets/heartbeat.svg?v=2" width="100%" alt="Contribution heartbeat" />
+
 <img src="https://streak-stats.demolab.com/?user=newsemaborneo&hide_border=true&background=0D0D0D&stroke=FF0033&ring=FF0033&fire=FF0033&currStreakLabel=00F0FF&sideLabels=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=888888" alt="GitHub streak" />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=newsemaborneo&bg_color=0D0D0D&color=FF0033&line=FF0033&point=00F0FF&area=true&area_color=FF0033&hide_border=true&title_color=FF0033" alt="Contribution graph" width="100%" />
