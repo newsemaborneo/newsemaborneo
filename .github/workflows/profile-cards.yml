@@ -8,9 +8,11 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: vn7n24fzkq/github-profile-summary-cards@release/v4
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
         with:
