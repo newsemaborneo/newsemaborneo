@@ -81,11 +81,11 @@ $ ls ./learning
 
 <div align="center">
 
-<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/3-stats.svg" alt="GitHub stats" />
-<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/2-most-commit-language.svg" alt="Most commit language" />
+<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/3-stats.svg" alt="GitHub stats" />
+<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/2-most-commit-language.svg" alt="Most commit language" />
 
-<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/1-repos-per-language.svg" alt="Repos per language" />
-<img height="180" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/github_dark/4-productive-time.svg" alt="Productive time" />
+<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/1-repos-per-language.svg" alt="Repos per language" />
+<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/4-productive-time.svg" alt="Productive time" />
 
 </div>
 
