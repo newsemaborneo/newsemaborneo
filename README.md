@@ -1,6 +1,6 @@
 <div align="center">
 
-# NEWSEM ABORNEO
+
 
 <a href="https://newsemaborneo.github.io/newsemaborneo/">
   <img src="https://github.com/newsemaborneo/newsemaborneo/blob/main/assets/robot.svg?raw=true" width="460" alt="robot Newsem" />
