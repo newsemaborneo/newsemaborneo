@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robot Newsem</title>
+<style>
+  :root { --red:#ff0033; --cyan:#00f0ff; --bg:#0b0b0f; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; min-height:100%; background:
+      radial-gradient(circle at 50% 30%, #1a0a10 0%, var(--bg) 60%);
+    color:#fff; font-family:"JetBrains Mono",ui-monospace,monospace; }
+  body { display:flex; flex-direction:column; align-items:center; padding:28px 16px 40px; overflow-x:hidden; }
+
+  .bubble { max-width:440px; min-height:64px; background:var(--cyan); color:#000; font-weight:700;
+    padding:14px 18px; border-radius:18px; position:relative; margin-bottom:26px; line-height:1.45; font-size:15px; }
+  .bubble::after { content:""; position:absolute; left:50%; bottom:-12px; margin-left:-12px;
+    border:12px solid transparent; border-top-color:var(--cyan); border-bottom:0; }
+
+  .robot { position:relative; width:250px; cursor:pointer; user-select:none; animation:float 3s ease-in-out infinite; }
+  @keyframes float { 50% { transform:translateY(-12px); } }
+  .robot.jump { animation:jump .55s; }
+  @keyframes jump { 30% { transform:translateY(-70px) rotate(-6deg);} 60% { transform:translateY(0) rotate(5deg);} }
+
+  .antenna { position:absolute; left:50%; top:-36px; width:6px; height:36px; background:#8a8a99; transform:translateX(-50%); }
+  .antenna::before { content:""; position:absolute; top:-14px; left:-8px; width:22px; height:22px; border-radius:50%;
+    background:var(--red); box-shadow:0 0 18px var(--red); animation:ant 1.4s infinite; }
+  @keyframes ant { 50% { background:var(--cyan); box-shadow:0 0 18px var(--cyan); } }
+
+  .head { position:relative; height:170px; border-radius:38px; border:4px solid var(--red);
+    background:linear-gradient(#2a2a33,#0e0e12); box-shadow:0 0 45px #ff003344; transition:transform .12s; }
+  .ear { position:absolute; top:48px; width:16px; height:52px; background:var(--red); border-radius:8px; box-shadow:0 0 14px var(--red); }
+  .ear.l { left:-22px; } .ear.r { right:-22px; }
+  .visor { position:absolute; inset:16px 16px 22px; border-radius:28px; background:linear-gradient(135deg,#050508,#14141c);
+    border:2px solid #00f0ff55; overflow:hidden; }
+  .eye { position:absolute; top:16px; width:46px; height:50px; background:radial-gradient(circle,#fff 0%,var(--cyan) 45%,#00f0ff33 100%);
+    border-radius:50%; box-shadow:0 0 22px var(--cyan); animation:blink 5s infinite; }
+  .eye.l { left:26px; } .eye.r { right:26px; }
+  @keyframes blink { 0%,91%,100% { transform:scaleY(1);} 95% { transform:scaleY(.08);} }
+  .pupil { position:absolute; width:18px; height:18px; left:14px; top:16px; background:#06323a; border-radius:50%; box-shadow:0 0 6px #000 inset; }
+  .mouth { position:absolute; left:50%; bottom:8px; width:50px; height:20px; transform:translateX(-50%);
+    border-bottom:5px solid var(--cyan); border-radius:0 0 50px 50px; filter:drop-shadow(0 0 5px var(--cyan)); transition:all .15s; }
+  .mouth.o { width:26px; height:26px; border:5px solid var(--cyan); border-radius:50%; bottom:4px; }
+  .mouth.talk { animation:talk .22s infinite alternate; }
+  @keyframes talk { to { height:6px; } }
+  .cheek { position:absolute; top:108px; width:14px; height:14px; border-radius:50%; background:var(--red); opacity:.5; }
+  .cheek.l { left:22px; } .cheek.r { right:22px; }
+
+  .neck { width:36px; height:12px; margin:0 auto; background:#3a3a46; border-radius:4px; }
+  .body { position:relative; width:130px; height:96px; margin:0 auto; border-radius:24px; border:4px solid var(--red);
+    background:linear-gradient(#2a2a33,#0e0e12); }
+  .screen { position:absolute; left:16px; right:16px; top:14px; height:36px; border-radius:10px; background:#050508; border:1px solid #00f0ff55; }
+  .screen::after { content:""; position:absolute; left:8px; right:8px; top:17px; height:2px; background:var(--cyan);
+    box-shadow:0 0 8px var(--cyan); animation:beat 2s infinite; }
+  @keyframes beat { 50% { transform:scaleY(6); opacity:.5; } }
+  .leds { position:absolute; bottom:10px; left:0; right:0; display:flex; justify-content:center; gap:12px; }
+  .leds i { width:9px; height:9px; border-radius:50%; background:var(--red); animation:led 1s infinite; }
+  .leds i:nth-child(even) { background:var(--cyan); animation-delay:.5s; }
+  @keyframes led { 50% { opacity:.2; } }
+  .arm { position:absolute; top:6px; width:24px; height:70px; background:var(--red); border-radius:12px; }
+  .arm.l { left:-34px; }
+  .arm.r { right:-34px; transform-origin:50% 8px; animation:wave 1.1s ease-in-out infinite; }
+  @keyframes wave { 50% { transform:rotate(-38deg); } }
+  .shadow { width:150px; height:14px; margin:18px auto 0; border-radius:50%; background:var(--red); opacity:.25; filter:blur(4px); animation:sh 3s ease-in-out infinite; }
+  @keyframes sh { 50% { transform:scaleX(.7); opacity:.12; } }
+
+  .chips { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:26px; max-width:520px; }
+  .chip { background:#111; color:#fff; border:1px solid var(--red); padding:9px 14px; border-radius:999px;
+    font-family:inherit; font-size:13px; cursor:pointer; transition:.15s; }
+  .chip:hover { background:var(--red); box-shadow:0 0 16px #ff003388; transform:translateY(-2px); }
+
+  form { display:flex; gap:8px; margin-top:18px; width:100%; max-width:440px; }
+  input { flex:1; background:#111; border:1px solid #00f0ff66; color:#fff; padding:11px 14px; border-radius:12px; font-family:inherit; font-size:14px; outline:none; }
+  input:focus { border-color:var(--cyan); box-shadow:0 0 12px #00f0ff55; }
+  button.send { background:var(--cyan); border:0; color:#000; font-weight:700; border-radius:12px; padding:0 18px; cursor:pointer; font-family:inherit; }
+</style>
+</head>
+<body>
+
+<div class="bubble" id="bubble"></div>
+
+<div class="robot" id="robot">
+  <div class="antenna"></div>
+  <div class="head" id="head">
+    <div class="ear l"></div><div class="ear r"></div>
+    <div class="visor">
+      <div class="eye l"><div class="pupil"></div></div>
+      <div class="eye r"><div class="pupil"></div></div>
+      <div class="mouth" id="mouth"></div>
+    </div>
+    <div class="cheek l"></div><div class="cheek r"></div>
+  </div>
+  <div class="neck"></div>
+  <div class="body">
+    <div class="arm l"></div><div class="arm r"></div>
+    <div class="screen"></div>
+    <div class="leds"><i></i><i></i><i></i><i></i></div>
+  </div>
+</div>
+<div class="shadow"></div>
+
+<div class="chips" id="chips">
+  <button class="chip" data-k="api">🚀 Bikin REST API</button>
+  <button class="chip" data-k="iot">📡 Proyek IoT</button>
+  <button class="chip" data-k="ai">🤖 Main AI</button>
+  <button class="chip" data-k="mobile">📱 Aplikasi mobile</button>
+  <button class="chip" data-k="bug">🐛 Lagi ada bug</button>
+  <button class="chip" data-k="semangat">🔥 Butuh semangat</button>
+  <button class="chip" data-k="kopi">☕ Ngopi dulu</button>
+</div>
+
+<form id="form" autocomplete="off">
+  <input id="msg" placeholder="ketik sesuatu, misal: laravel, iot, bug..." />
+  <button class="send" type="submit">Kirim</button>
+</form>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const bubble = $("bubble"), mouth = $("mouth"), head = $("head"), robot = $("robot");
+  const pupils = document.querySelectorAll(".pupil");
+
+  /* ---------- mata mengikuti kursor ---------- */
+  function look(x, y) {
+    pupils.forEach(p => {
+      const r = p.parentElement.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      const a = Math.atan2(y - cy, x - cx);
+      const d = Math.min(11, Math.hypot(x - cx, y - cy) / 10);
+      p.style.transform = `translate(${Math.cos(a) * d}px, ${Math.sin(a) * d}px)`;
+    });
+    const hr = head.getBoundingClientRect();
+    const hx = hr.left + hr.width / 2, hy = hr.top + hr.height / 2;
+    const dx = Math.max(-1, Math.min(1, (x - hx) / 400));
+    const dy = Math.max(-1, Math.min(1, (y - hy) / 400));
+    head.style.transform = `rotate(${dx * 9}deg) translate(${dx * 8}px, ${dy * 6}px)`;
+    if (!talking) mouth.classList.toggle("o", Math.hypot(x - hx, y - hy) < 150);
+  }
+  document.addEventListener("mousemove", e => look(e.clientX, e.clientY));
+  document.addEventListener("touchmove", e => look(e.touches[0].clientX, e.touches[0].clientY));
+
+  /* ---------- robot bicara ---------- */
+  let talking = false, timer = null;
+  function say(text) {
+    clearInterval(timer);
+    bubble.textContent = "";
+    talking = true;
+    mouth.classList.remove("o");
+    mouth.classList.add("talk");
+    let i = 0;
+    timer = setInterval(() => {
+      bubble.textContent = text.slice(0, ++i);
+      if (i >= text.length) {
+        clearInterval(timer);
+        talking = false;
+        mouth.classList.remove("talk");
+      }
+    }, 28);
+  }
+  const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+  /* ---------- sapaan sesuai waktu ---------- */
+  function greeting() {
+    const h = new Date().getHours();
+    const w = h < 11 ? "Selamat pagi" : h < 15 ? "Selamat siang" : h < 18 ? "Selamat sore" : "Selamat malam";
+    return `${w}! Aku robot-nya Newsem. Mau bikin apa hari ini? Pilih di bawah atau ketik langsung ya.`;
+  }
+
+  /* ---------- kamus balasan ---------- */
+  const R = {
+    api: [
+      "REST API ya? Mantap! Mulai dari desain endpoint dulu, baru validasi dan autentikasi. Laravel atau NestJS nih?",
+      "API yang bagus itu seperti pelayan yang baik: cepat, sopan, dan nggak salah pesanan. Yuk rancang bareng!"
+    ],
+    iot: [
+      "IoT! ESP32 + MQTT + dashboard real-time, kombinasi favorit Newsem. Sensor apa yang mau dipakai?",
+      "Kabel sudah siap? Solder jangan lupa. Eh, jangan sentuh bagian yang panas ya 🔥"
+    ],
+    ai: [
+      "AI? Bisa LLM, bisa computer vision. Datanya sudah ada belum? Model sebagus apa pun butuh data yang waras.",
+      "Hati-hati, nanti AI-nya lebih pintar dari aku. Tapi tenang, aku punya tombol power 😎"
+    ],
+    mobile: [
+      "Aplikasi mobile? Flutter siap jalan! Satu kode, dua platform. Mau mulai dari UI atau backend-nya dulu?"
+    ],
+    bug: [
+      "Bug ya... tarik napas. Baca error-nya pelan-pelan, 80% jawabannya ada di sana.",
+      "Coba jelaskan bug-nya ke bebek karet. Serius, ini manjur. Kalau masih gagal, kita cari bareng!",
+      "Di laptopku jalan kok! (kalimat terkenal semua developer) 😅"
+    ],
+    semangat: [
+      "Kamu sudah sejauh ini, jangan menyerah sekarang! Satu commit kecil hari ini lebih baik dari nol 💪",
+      "Semua developer hebat pernah bingung sama error. Bedanya, mereka lanjut. Gas lagi!"
+    ],
+    kopi: [
+      "Kopi dulu, baru coding ☕ Bahan bakar utama programmer sedunia.",
+      "Satu cangkir kopi = tiga bug terselesaikan. Itu rumus yang belum terbukti, tapi percaya aja."
+    ],
+    laravel: ["Laravel: Eloquent, migration, queue... elegan banget. Mau bahas apa, relasi atau auth?"],
+    nestjs: ["NestJS: modular, rapi, TypeScript. Cocok buat backend yang mau di-scale. Mau mulai dari module atau guard?"],
+    go: ["Go: cepat, ringan, goroutine-nya juara. Cocok untuk service yang butuh performa tinggi."],
+    halo: ["Halo juga! Mau bikin apa hari ini?", "Hai hai! Ada proyek seru yang mau digarap?"],
+    makasih: ["Sama-sama! Kalau butuh lagi, aku di sini kok 🤖"],
+    def: [
+      "Hmm, aku belum paham yang itu. Coba kata kunci: api, iot, ai, flutter, bug, kopi, laravel, nestjs, atau go.",
+      "Wah, di luar database-ku. Coba pilih salah satu tombol di bawah ya!"
+    ]
+  };
+  const keywords = [
+    ["api", /api|endpoint|rest|backend/i], ["iot", /iot|esp32|mqtt|sensor|banjir/i],
+    ["ai", /\bai\b|llm|vision|model|gpt|claude/i], ["mobile", /flutter|mobile|android|ios|aplikasi/i],
+    ["bug", /bug|error|eror|gagal|rusak/i], ["semangat", /semangat|capek|lelah|malas|nyerah|stres/i],
+    ["kopi", /kopi|ngopi|coffee/i], ["laravel", /laravel|php/i], ["nestjs", /nest/i],
+    ["go", /\bgo\b|golang/i], ["halo", /halo|hai|hi\b|hello|pagi|siang|sore|malam/i],
+    ["makasih", /makasih|terima kasih|thanks|thx/i]
+  ];
+
+  function reply(key) { say(pick(R[key] || R.def)); }
+
+  document.querySelectorAll(".chip").forEach(c =>
+    c.addEventListener("click", () => reply(c.dataset.k)));
+
+  $("form").addEventListener("submit", e => {
+    e.preventDefault();
+    const v = $("msg").value.trim();
+    if (!v) return;
+    const hit = keywords.find(([, re]) => re.test(v));
+    reply(hit ? hit[0] : "def");
+    $("msg").value = "";
+  });
+
+  /* ---------- klik robot ---------- */
+  const jokes = [
+    "Aduh! Jangan dicolek, geli 😵", "Aku bukan tombol, aku robot!",
+    "git push --force? Berani juga kamu.", "Kamu liatin aku, aku liatin kamu 👀",
+    "Sudah minum air belum? Developer juga manusia 💧"
+  ];
+  robot.addEventListener("click", () => {
+    say(pick(jokes));
+    robot.classList.remove("jump"); void robot.offsetWidth; robot.classList.add("jump");
+  });
+
+  say(greeting());
+</script>
+</body>
+</html>
