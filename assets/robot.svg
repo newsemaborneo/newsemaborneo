@@ -1,39 +1,135 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="200" height="230">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" width="400" height="380">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2a33"/>
+      <stop offset="1" stop-color="#0e0e12"/>
+    </linearGradient>
+    <linearGradient id="visor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050508"/>
+      <stop offset="1" stop-color="#14141c"/>
+    </linearGradient>
+    <radialGradient id="eyeglow">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.35" stop-color="#00F0FF"/>
+      <stop offset="1" stop-color="#00F0FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    text { font-family: monospace; font-size: 15px; font-weight: bold; }
+  </style>
+
+  <!-- bintang kecil -->
+  <g fill="#00F0FF">
+    <circle cx="40" cy="80" r="2"><animate attributeName="opacity" values="1;0.1;1" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="360" cy="150" r="2"><animate attributeName="opacity" values="0.1;1;0.1" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="70" cy="230" r="2.5" fill="#FF0033"><animate attributeName="opacity" values="1;0.1;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="335" cy="260" r="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- balon percakapan -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="3s" repeatCount="indefinite"/>
-    <line x1="100" y1="22" x2="100" y2="48" stroke="#FF0033" stroke-width="4"/>
-    <circle cx="100" cy="16" r="8" fill="#FF0033">
-      <animate attributeName="fill" values="#FF0033;#00F0FF;#FF0033" dur="1.5s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="8;11;8" dur="1.5s" repeatCount="indefinite"/>
+    <rect x="70" y="8" width="260" height="42" rx="14" fill="#00F0FF"/>
+    <polygon points="190,50 210,50 200,64" fill="#00F0FF"/>
+    <text x="200" y="35" text-anchor="middle" fill="#000" opacity="0">
+      Halo! Selamat datang di profilku
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.02;0.22;0.25;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+    <text x="200" y="35" text-anchor="middle" fill="#000" opacity="0">
+      Mau bikin apa hari ini?
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25;0.27;0.47;0.5;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+    <text x="200" y="35" text-anchor="middle" fill="#000" opacity="0">
+      API, IoT, atau AI? Gas aja!
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.52;0.72;0.75;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+    <text x="200" y="35" text-anchor="middle" fill="#000" opacity="0">
+      Bug itu fitur. Ngopi dulu yuk!
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.75;0.77;0.97;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- bayangan -->
+  <ellipse cx="200" cy="360" rx="70" ry="9" fill="#FF0033" opacity="0.25">
+    <animate attributeName="rx" values="70;52;70" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.12;0.25" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- robot melayang -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -12;0 0" dur="3s" repeatCount="indefinite"/>
+
+    <!-- antena -->
+    <line x1="200" y1="92" x2="200" y2="118" stroke="#8a8a99" stroke-width="5"/>
+    <circle cx="200" cy="84" r="9" fill="#FF0033" filter="url(#glow)">
+      <animate attributeName="fill" values="#FF0033;#00F0FF;#FF0033" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="9;12;9" dur="1.4s" repeatCount="indefinite"/>
     </circle>
-    <rect x="40" y="48" width="120" height="90" rx="22" fill="#111111" stroke="#FF0033" stroke-width="4"/>
-    <rect x="28" y="78" width="12" height="30" rx="5" fill="#FF0033"/>
-    <rect x="160" y="78" width="12" height="30" rx="5" fill="#FF0033"/>
-    <circle cx="75" cy="85" r="17" fill="#ffffff"/>
-    <circle cx="125" cy="85" r="17" fill="#ffffff"/>
-    <circle cx="75" cy="85" r="7" fill="#FF0033">
-      <animateTransform attributeName="transform" type="translate" values="-6 0;6 0;6 4;-6 4;-6 0" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="125" cy="85" r="7" fill="#FF0033">
-      <animateTransform attributeName="transform" type="translate" values="-6 0;6 0;6 4;-6 4;-6 0" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <rect x="58" y="68" width="34" height="0" fill="#111111">
-      <animate attributeName="height" values="0;0;34;0;0" keyTimes="0;0.9;0.94;0.98;1" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="108" y="68" width="34" height="0" fill="#111111">
-      <animate attributeName="height" values="0;0;34;0;0" keyTimes="0;0.9;0.94;0.98;1" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="72" y="115" width="56" height="10" rx="5" fill="#00F0FF">
-      <animate attributeName="width" values="56;40;56" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="x" values="72;80;72" dur="2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="65" y="146" width="70" height="62" rx="14" fill="#111111" stroke="#FF0033" stroke-width="4"/>
-    <circle cx="100" cy="177" r="9" fill="#00F0FF">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
-    </circle>
-    <rect x="40" y="152" width="18" height="46" rx="8" fill="#FF0033"/>
-    <rect x="142" y="152" width="18" height="46" rx="8" fill="#FF0033">
-      <animateTransform attributeName="transform" type="rotate" values="0 151 152;-25 151 152;0 151 152" dur="1.6s" repeatCount="indefinite"/>
-    </rect>
+
+    <!-- kepala -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-3 200 170;3 200 170;-3 200 170" dur="5s" repeatCount="indefinite"/>
+      <!-- telinga -->
+      <rect x="92" y="150" width="16" height="50" rx="7" fill="#FF0033" filter="url(#glow)"/>
+      <rect x="292" y="150" width="16" height="50" rx="7" fill="#FF0033" filter="url(#glow)"/>
+      <!-- cangkang -->
+      <rect x="104" y="116" width="192" height="130" rx="34" fill="url(#metal)" stroke="#FF0033" stroke-width="4"/>
+      <!-- visor -->
+      <rect x="120" y="134" width="160" height="82" rx="26" fill="url(#visor)" stroke="#00F0FF" stroke-opacity="0.5" stroke-width="2"/>
+
+      <!-- mata -->
+      <g filter="url(#glow)">
+        <g>
+          <animateTransform attributeName="transform" type="translate"
+            values="-10 0;12 -4;12 6;-10 6;0 0;-10 0" keyTimes="0;0.2;0.4;0.6;0.8;1" dur="7s" repeatCount="indefinite"/>
+          <ellipse cx="164" cy="174" rx="17" ry="20" fill="#00F0FF">
+            <animate attributeName="ry" values="20;20;2;20;20" keyTimes="0;0.9;0.94;0.98;1" dur="5s" repeatCount="indefinite"/>
+          </ellipse>
+          <ellipse cx="236" cy="174" rx="17" ry="20" fill="#00F0FF">
+            <animate attributeName="ry" values="20;20;2;20;20" keyTimes="0;0.9;0.94;0.98;1" dur="5s" repeatCount="indefinite"/>
+          </ellipse>
+          <circle cx="170" cy="168" r="5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="242" cy="168" r="5" fill="#ffffff" opacity="0.9"/>
+        </g>
+      </g>
+
+      <!-- pipi -->
+      <circle cx="140" cy="205" r="6" fill="#FF0033" opacity="0.55"/>
+      <circle cx="260" cy="205" r="6" fill="#FF0033" opacity="0.55"/>
+
+      <!-- mulut senyum -->
+      <path d="M180 206 Q200 222 220 206" stroke="#00F0FF" stroke-width="5" fill="none" stroke-linecap="round" filter="url(#glow)">
+        <animate attributeName="d" values="M180 206 Q200 222 220 206;M184 208 Q200 214 216 208;M180 206 Q200 222 220 206" dur="3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- leher -->
+    <rect x="182" y="246" width="36" height="12" rx="4" fill="#3a3a46"/>
+
+    <!-- badan -->
+    <rect x="140" y="258" width="120" height="86" rx="22" fill="url(#metal)" stroke="#FF0033" stroke-width="4"/>
+    <rect x="160" y="276" width="80" height="34" rx="10" fill="#050508" stroke="#00F0FF" stroke-opacity="0.5"/>
+    <!-- grafik detak -->
+    <polyline points="166,293 182,293 190,282 200,304 210,288 218,293 234,293" fill="none" stroke="#00F0FF" stroke-width="2.5" filter="url(#glow)">
+      <animate attributeName="stroke" values="#00F0FF;#FF0033;#00F0FF" dur="2s" repeatCount="indefinite"/>
+    </polyline>
+    <circle cx="170" cy="326" r="5" fill="#FF0033"><animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/></circle>
+    <circle cx="190" cy="326" r="5" fill="#00F0FF"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite"/></circle>
+    <circle cx="210" cy="326" r="5" fill="#FF0033"><animate attributeName="opacity" values="1;0.2;1" dur="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="230" cy="326" r="5" fill="#00F0FF"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.3s" repeatCount="indefinite"/></circle>
+
+    <!-- tangan kiri -->
+    <rect x="108" y="266" width="24" height="62" rx="11" fill="#FF0033"/>
+    <circle cx="120" cy="334" r="12" fill="#FF0033"/>
+    <!-- tangan kanan melambai -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 268 270;-38 268 270;0 268 270" dur="1.1s" repeatCount="indefinite"/>
+      <rect x="268" y="266" width="24" height="62" rx="11" fill="#FF0033"/>
+      <circle cx="280" cy="334" r="12" fill="#FF0033"/>
+    </g>
   </g>
 </svg>
