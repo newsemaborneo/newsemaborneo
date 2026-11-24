@@ -81,11 +81,23 @@ $ ls ./learning
 
 <div align="center">
 
-<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/3-stats.svg" alt="GitHub stats" />
-<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/2-most-commit-language.svg" alt="Most commit language" />
+<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=newsemaborneo&theme=2077" alt="Profile details" />
+<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=newsemaborneo&theme=2077" alt="GitHub stats" />
 
-<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/1-repos-per-language.svg" alt="Repos per language" />
-<img width="48%" src="https://raw.githubusercontent.com/newsemaborneo/newsemaborneo/main/profile-summary-card-output/2077/4-productive-time.svg" alt="Productive time" />
+<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=newsemaborneo&theme=2077" alt="Repos per language" />
+<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=newsemaborneo&theme=2077&utcOffset=7" alt="Productive time" />
+
+</div>
+
+---
+
+## 🔥 CONTRIBUTION STATS
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com/?user=newsemaborneo&hide_border=true&background=0D0D0D&stroke=FF0033&ring=FF0033&fire=FF0033&currStreakLabel=00F0FF&sideLabels=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=888888" alt="GitHub streak" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=newsemaborneo&bg_color=0D0D0D&color=FF0033&line=FF0033&point=00F0FF&area=true&area_color=FF0033&hide_border=true&title_color=FF0033" alt="Contribution graph" width="100%" />
 
 </div>
 
